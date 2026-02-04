@@ -5,7 +5,16 @@
 library(tidyverse)
 
 # load data 
-sample_data <- read_csv("sample_data.csv")
+sample_data <- read_csv("data/sample_data.csv")
+
+# Summarize Data 
+
+sample_data %>%
+  summarize(mean_cells = mean(cells_per_ml),
+            max_cells = max(cells_per_ml), 
+            min_cells = min(cells_per_ml))
+
+
 
 # No inputs/arguments needed
 getwd()
